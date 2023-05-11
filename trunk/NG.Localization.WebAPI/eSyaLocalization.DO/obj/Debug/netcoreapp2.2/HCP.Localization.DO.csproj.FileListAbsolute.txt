@@ -1,0 +1,9 @@
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\bin\Debug\netcoreapp2.2\HCP.Localization.DO.deps.json
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\bin\Debug\netcoreapp2.2\HCP.Localization.DO.dll
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\bin\Debug\netcoreapp2.2\HCP.Localization.DO.pdb
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\obj\Debug\netcoreapp2.2\HCP.Localization.DO.csprojAssemblyReference.cache
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\obj\Debug\netcoreapp2.2\HCP.Localization.DO.csproj.CoreCompileInputs.cache
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\obj\Debug\netcoreapp2.2\HCP.Localization.DO.AssemblyInfoInputs.cache
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\obj\Debug\netcoreapp2.2\HCP.Localization.DO.AssemblyInfo.cs
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\obj\Debug\netcoreapp2.2\HCP.Localization.DO.dll
+D:\OfficeWorkingProjects\AllWEBAPI\eSyaLocalize.WebAPI\NG.Localization.WebAPI\eSyaLocalization.DO\obj\Debug\netcoreapp2.2\HCP.Localization.DO.pdb

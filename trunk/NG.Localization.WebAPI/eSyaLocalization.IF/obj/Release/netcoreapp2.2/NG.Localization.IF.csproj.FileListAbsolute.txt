@@ -1,0 +1,12 @@
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\bin\Release\netcoreapp2.2\NG.Localization.IF.deps.json
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\bin\Release\netcoreapp2.2\NG.Localization.IF.dll
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\bin\Release\netcoreapp2.2\NG.Localization.IF.pdb
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\bin\Release\netcoreapp2.2\NG.Localization.DO.dll
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\bin\Release\netcoreapp2.2\NG.Localization.DO.pdb
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.csprojAssemblyReference.cache
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.csproj.CoreCompileInputs.cache
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.AssemblyInfoInputs.cache
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.AssemblyInfo.cs
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.csproj.CopyComplete
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.dll
+D:\eSya Project\Solution\Project_eSyaWebAPI\eSyaLocalize.WebAPI\trunk\NG.Localization.WebAPI\eSyaLocalization.IF\obj\Release\netcoreapp2.2\NG.Localization.IF.pdb

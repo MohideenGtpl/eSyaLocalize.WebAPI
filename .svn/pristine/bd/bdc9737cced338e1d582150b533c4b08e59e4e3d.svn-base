@@ -1,0 +1,228 @@
+﻿using HCP.Localization.DL.Entities;
+using HCP.Localization.DO;
+using HCP.Localization.IF;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HCP.Localization.DL.Repository
+{
+    public class CultureRepository : ICultureRepository
+    {
+        private eSyaEnterprise _context { get; set; }
+
+        public CultureRepository(eSyaEnterprise context)
+        {
+            _context = context;
+        }
+        #region Language Culture
+        public async Task<List<DO_LanguageController>> GetResources()
+        {
+            try
+            {
+                return await _context.GtEcltfc.Where(x => x.ActiveStatus == true).Select
+                (r => new DO_LanguageController
+                {
+                    ResourceName = r.ResourceName
+                }).Distinct().ToListAsync();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<List<DO_LanguageCulture>> GetLanguageCulture(string Culture, string Resource)
+        {
+            try
+            {
+
+                if (Resource == "All")
+                {
+                    return await _context.GtEcltfc
+                       .GroupJoin(_context.GtEcltcd.Where(x => x.Culture.ToUpper().Trim() == Culture.ToUpper().Trim()),
+                       a => a.ResourceId,
+                       f => f.ResourceId,
+                       (a, f) => new { a, f = f.FirstOrDefault() })
+                       .Select(r => new DO_LanguageCulture
+                       {
+                           ResourceId = r.a.ResourceId,
+                           ResourceName = r.a.ResourceName,
+                           Key = r.a.Key,
+                           Value = r.a.Value,
+                           Culture = r.f != null ? r.f.Culture : "",
+                           CultureValue = r.f != null ? r.f.Value : ""
+
+                       }).ToListAsync();
+                }
+                else
+                {
+                    return await _context.GtEcltfc.Where(x => x.ResourceName.ToUpper().Trim() == Resource.ToUpper().Trim())
+                      .GroupJoin(_context.GtEcltcd.Where(x => x.Culture.ToUpper().Trim() == Culture.ToUpper().Trim()),
+                      a => a.ResourceId,
+                      f => f.ResourceId,
+                      (a, f) => new { a, f = f.FirstOrDefault() })
+                      .Select(r => new DO_LanguageCulture
+                      {
+                          ResourceId = r.a.ResourceId,
+                          ResourceName = r.a.ResourceName,
+                          Key = r.a.Key,
+                          Value = r.a.Value,
+                          Culture = r.f != null ? r.f.Culture : "",
+                          CultureValue = r.f != null ? r.f.Value : ""
+
+                      }).ToListAsync();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<DO_ReturnParameter> InsertOrUpdateLanguageCulture(List<DO_LanguageCulture> obj)
+        {
+            using (var dbContextTransaction = _context.Database.BeginTransaction())
+            {
+                try
+                {
+
+                    foreach (var rc in obj.Where(x => x.CultureValue != null && x.CultureValue != ""))
+                    {
+                        GtEcltcd r_culture = _context.GtEcltcd.Where(x => x.ResourceId == rc.ResourceId
+                                        && x.Culture.ToUpper().Trim() == rc.Culture.ToUpper().Trim()).FirstOrDefault();
+                        if (r_culture == null)
+                        {
+                            var add = new GtEcltcd
+                            {
+                                ResourceId = rc.ResourceId,
+                                Culture = rc.Culture,
+                                Value = rc.CultureValue,
+                                ActiveStatus = true,
+                                FormId = rc.FormId,
+                                CreatedBy = rc.UserID,
+                                CreatedOn = System.DateTime.Now,
+                                CreatedTerminal = rc.TerminalID
+                            };
+                            _context.GtEcltcd.Add(add);
+                        }
+                        else
+                        {
+                            r_culture.Value = rc.CultureValue;
+                            r_culture.ActiveStatus = true;
+                            r_culture.ModifiedBy = rc.UserID;
+                            r_culture.ModifiedOn = System.DateTime.Now;
+                            r_culture.ModifiedTerminal = rc.TerminalID;
+                        }
+                        await _context.SaveChangesAsync();
+                    }
+
+                    dbContextTransaction.Commit();
+                    return new DO_ReturnParameter() { Status = true, Message = "Saved Successfully." };
+                }
+                catch (DbUpdateException ex)
+                {
+                    dbContextTransaction.Rollback();
+                    throw new Exception(CommonMethod.GetValidationMessageFromException(ex));
+                }
+                catch (Exception ex)
+                {
+                    dbContextTransaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+        #endregion 
+
+        #region Culture Keys
+        public List<DO_LanguageCulture> GetDistinictCultureKeys(string Culture)
+        {
+            try
+            {
+                var result = _context.GtEcltfc
+                            .GroupJoin(_context.GtEcltcd.Where(x => x.Culture.ToUpper().Trim() == Culture.ToUpper().Trim()),
+                            a => a.ResourceId,
+                            f => f.ResourceId,
+                            (a, f) => new { a, f = f.FirstOrDefault() })
+                            .Select(r => new DO_LanguageCulture
+                            {
+                                Key = r.a.Key,
+                                Value = r.a.Value,
+                                CultureValue = r.f != null ? r.f.Value : ""
+
+                            }).ToList();
+                var DistinctKeys = result.GroupBy(x => x.Key).Select(y => y.First());
+                return DistinctKeys.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<DO_ReturnParameter> InsertOrUpdateCultureKeys(List<DO_LanguageCulture> obj)
+        {
+           using (var dbContextTransaction = _context.Database.BeginTransaction())
+                {
+                    try
+                    {
+
+                        foreach (var rc in obj.Where(x => x.CultureValue != null && x.CultureValue != ""))
+                        {
+                            var ResourceIds = _context.GtEcltfc.Where(k => k.Key.ToUpper().Trim() == rc.Key.ToUpper().Trim()).ToList();
+
+                            foreach (var resId in ResourceIds)
+                            {
+                                GtEcltcd r_culture = _context.GtEcltcd.Where(x => x.ResourceId == resId.ResourceId
+                                                && x.Culture.ToUpper().Trim() == rc.Culture.ToUpper().Trim()).FirstOrDefault();
+                                if (r_culture == null)
+                                {
+                                    var add = new GtEcltcd
+                                    {
+                                        ResourceId = resId.ResourceId,
+                                        Culture = rc.Culture,
+                                        Value = rc.CultureValue,
+                                        ActiveStatus = true,
+                                        FormId = rc.FormId,
+                                        CreatedBy = rc.UserID,
+                                        CreatedOn = System.DateTime.Now,
+                                        CreatedTerminal = rc.TerminalID
+                                    };
+                                _context.GtEcltcd.Add(add);
+                                }
+                                else
+                                {
+                                    r_culture.Value = rc.CultureValue;
+                                    r_culture.ActiveStatus = true;
+                                    r_culture.ModifiedBy = rc.UserID;
+                                    r_culture.ModifiedOn = System.DateTime.Now;
+                                    r_culture.ModifiedTerminal = rc.TerminalID;
+                                }
+                                await _context.SaveChangesAsync();
+                            }
+                        }
+
+                    dbContextTransaction.Commit();
+                        return new DO_ReturnParameter() { Status = true, Message = "Saved Successfully." };
+                    }
+                    catch (DbUpdateException ex)
+                    {
+                    dbContextTransaction.Rollback();
+                        throw new Exception(CommonMethod.GetValidationMessageFromException(ex));
+                    }
+                    catch (Exception ex)
+                    {
+                    dbContextTransaction.Rollback();
+                        throw ex;
+                    }
+                }
+        }
+
+        #endregion Culture
+    }
+}

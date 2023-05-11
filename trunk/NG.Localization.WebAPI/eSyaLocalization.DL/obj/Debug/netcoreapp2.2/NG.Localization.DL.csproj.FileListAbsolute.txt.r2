@@ -1,0 +1,16 @@
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DL.deps.json
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DL.runtimeconfig.json
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DL.runtimeconfig.dev.json
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DL.dll
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DL.pdb
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DO.dll
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.IF.dll
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.DO.pdb
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\bin\Debug\netcoreapp2.2\NG.Localization.IF.pdb
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.csprojAssemblyReference.cache
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.csproj.CoreCompileInputs.cache
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.AssemblyInfoInputs.cache
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.AssemblyInfo.cs
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.csproj.CopyComplete
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.dll
+D:\OfficeWorkingProjects\WebProjects\ESYAProject_WorkingUI&WEBAPI\Working_AlleSyaWebAPI\eSyaLocalizationWebAPI\NG.Localization.WebAPI\eSyaLocalization.DL\obj\Debug\netcoreapp2.2\NG.Localization.DL.pdb

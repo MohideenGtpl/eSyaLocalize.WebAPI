@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "eSyaLocalization.IF/1.0.0": {
+        "dependencies": {
+          "eSyaLocalization.DO": "1.0.0"
+        },
+        "runtime": {
+          "eSyaLocalization.IF.dll": {}
+        }
+      },
+      "eSyaLocalization.DO/1.0.0": {
+        "runtime": {
+          "eSyaLocalization.DO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "eSyaLocalization.IF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "eSyaLocalization.DO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
